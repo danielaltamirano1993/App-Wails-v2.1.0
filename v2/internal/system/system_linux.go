@@ -9,7 +9,9 @@ import (
 )
 
 func checkGCC() *packagemanager.Dependency {
+
 	version := packagemanager.AppVersion("gcc")
+
 	return &packagemanager.Dependency{
 		Name:           "gcc ",
 		PackageName:    "N/A",
@@ -22,6 +24,7 @@ func checkGCC() *packagemanager.Dependency {
 }
 
 func checkPkgConfig() *packagemanager.Dependency {
+
 	version := packagemanager.AppVersion("pkg-config")
 
 	return &packagemanager.Dependency{
@@ -85,5 +88,6 @@ func (i *Info) discover() error {
 		}
 		i.Dependencies = dependencies
 	}
+
 	return nil
 }
